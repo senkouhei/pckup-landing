@@ -26,12 +26,19 @@ const SERVICES = [
 export default function Services() {
   return (
     <section className="section" id="services">
-      <p className="section__label fade-up">What We Do</p>
-      <h2 className="section__heading fade-up">
-        Intelligent Logistics,
-        <br />
-        End to End
-      </h2>
+      <div className="services-header">
+        <div className="services-header__text">
+          <p className="section__label fade-up">What We Do</p>
+          <h2 className="section__heading fade-up">
+            Intelligent Logistics,
+            <br />
+            End to End
+          </h2>
+        </div>
+        <div className="services-header__image fade-up">
+          <img src="/images/services.png" alt="Pckup delivery van on route" />
+        </div>
+      </div>
       <div className="services-grid">
         {SERVICES.map((s) => (
           <div className="service-card fade-up" key={s.num}>

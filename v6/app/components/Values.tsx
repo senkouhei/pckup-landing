@@ -19,6 +19,9 @@ export default function Values() {
             <br />
             Every Delivery
           </h2>
+          <div className="values__image">
+            <img src="/images/values.png" alt="Pckup operations control room monitoring deliveries" />
+          </div>
         </div>
         <div className="values__list fade-up">
           {VALUES.map((v) => (

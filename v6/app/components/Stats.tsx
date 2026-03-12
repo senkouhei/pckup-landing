@@ -9,34 +9,41 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <section className="section" id="about">
-      <p className="section__label fade-up">Who We Are</p>
-      <h2 className="section__heading fade-up">
-        The Leading AI-Powered
-        <br />
-        Last-Mile Delivery Platform
-      </h2>
-      <div className="stats-grid">
-        {STATS.map((stat, i) => (
-          <div className="stat-card fade-up" key={i}>
-            <div className="stat-card__number">
-              {stat.isCounter ? (
-                <>
-                  <span className="counter" data-target={stat.target}>
-                    0
-                  </span>
-                  {stat.suffix?.includes("M") && "M"}
-                  <span className="accent">
-                    {stat.suffix?.replace("M", "")}
-                  </span>
-                </>
-              ) : (
-                stat.display
-              )}
-            </div>
-            <div className="stat-card__label">{stat.label}</div>
+    <section className="section stats-section" id="about">
+      <div className="stats-layout">
+        <div className="stats-layout__text">
+          <p className="section__label fade-up">Who We Are</p>
+          <h2 className="section__heading fade-up">
+            The Leading AI-Powered
+            <br />
+            Last-Mile Delivery Platform
+          </h2>
+          <div className="stats-grid">
+            {STATS.map((stat, i) => (
+              <div className="stat-card fade-up" key={i}>
+                <div className="stat-card__number">
+                  {stat.isCounter ? (
+                    <>
+                      <span className="counter" data-target={stat.target}>
+                        0
+                      </span>
+                      {stat.suffix?.includes("M") && "M"}
+                      <span className="accent">
+                        {stat.suffix?.replace("M", "")}
+                      </span>
+                    </>
+                  ) : (
+                    stat.display
+                  )}
+                </div>
+                <div className="stat-card__label">{stat.label}</div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+        <div className="stats-layout__image fade-up">
+          <img src="/images/industries.png" alt="Pckup logistics warehouse and fleet at sunset" />
+        </div>
       </div>
     </section>
   );

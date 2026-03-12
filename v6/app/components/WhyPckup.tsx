@@ -37,26 +37,30 @@ const PILLARS = [
 
 export default function WhyPckup() {
   return (
-    <section className="section" id="why" style={{ textAlign: "center" }}>
-      <p className="section__label fade-up">Why Pckup</p>
-      <h2
-        className="section__heading fade-up"
-        style={{ margin: "0 auto" }}
-      >
-        Smart Technology.
-        <br />
-        Human Reliability.
-        <br />
-        Proven Results.
-      </h2>
-      <div className="pillars">
-        {PILLARS.map((p, i) => (
-          <div className="pillar fade-up" key={i}>
-            <div className="pillar__icon">{p.icon}</div>
-            <h3 className="pillar__title">{p.title}</h3>
-            <p className="pillar__desc">{p.desc}</p>
+    <section className="section why-section" id="why">
+      <div className="why-layout">
+        <div className="why-layout__image fade-up">
+          <img src="/images/why.png" alt="AI-powered logistics platform on tablet" />
+        </div>
+        <div className="why-layout__content">
+          <p className="section__label fade-up">Why Pckup</p>
+          <h2 className="section__heading fade-up">
+            Smart Technology.
+            <br />
+            Human Reliability.
+            <br />
+            Proven Results.
+          </h2>
+          <div className="pillars">
+            {PILLARS.map((p, i) => (
+              <div className="pillar fade-up" key={i}>
+                <div className="pillar__icon">{p.icon}</div>
+                <h3 className="pillar__title">{p.title}</h3>
+                <p className="pillar__desc">{p.desc}</p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );
